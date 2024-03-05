@@ -3,6 +3,7 @@ import {
   } from "react-router-dom";
 import Main from "../Layout/Main";
 import SignIn from "../components/SignIn/SignIn";
+import SignOut from "../components/SignUP/SignUp";
 
   export const router = createBrowserRouter([
     {
@@ -10,13 +11,13 @@ import SignIn from "../components/SignIn/SignIn";
       element: <Main/>,
       children: [
         {
-          path: '/',
-          element: <SignIn/>
+            path: '/signin',
+            element: <SignIn/>
         },
         {
-            path: '/signin',
-            element: <div className="bg-indigo-600 w-full h-screen"></div>
-        }
+          path: '/signup',
+          element: <SignOut/>
+      },
       ]
     },
   ]);
